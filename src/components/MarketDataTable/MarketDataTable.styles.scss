@@ -1,0 +1,18 @@
+.marketdata-container {
+  height: 100%;
+  text-align: center;
+  .marketdata-table {
+    border-collapse: collapse;
+    width: 100%;
+    tbody {
+      tr {
+        border-bottom: 1px rgb(207, 207, 207) solid;
+        td {
+          .coin-image {
+            max-width: 25px;
+          }
+        }
+      }
+    }
+  }
+}
