@@ -6,8 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import HomePage from './pages/HomePage.component';
-import ViewAsset from './pages/ViewAsset.component';
+import HomePage from './pages/HomePage/HomePage.component';
+import Asset from './pages/Asset/Asset.component';
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
@@ -15,7 +15,7 @@ ReactDOM.render(
     <Routes>
       <Route path='/' element={<HomePage />} className='routes' />
       {/* List all */}
-      <Route path='/:id' element={<ViewAsset />} />
+      <Route path='/:id' element={<Asset />} />
     </Routes>
   </BrowserRouter>,
   rootElement
