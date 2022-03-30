@@ -1,0 +1,35 @@
+.cryptoNews-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: left;
+  .newsitem-container {
+    flex: 50%;
+    height: 250px;
+    border: 1px black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .text-container {
+      width: 50%;
+      .newsitem-title {
+        color: blue;
+      }
+    }
+    .image-container {
+      height: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .newsimage {
+        height: 150px;
+      }
+    }
+  }
+  :hover {
+    background-color: beige;
+    cursor: pointer;
+  }
+}

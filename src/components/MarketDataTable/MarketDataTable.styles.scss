@@ -12,6 +12,16 @@
             max-width: 25px;
           }
         }
+        .positive {
+          color: green;
+        }
+        .negative {
+          color: red;
+        }
+        &:hover {
+          background-color: bisque;
+          cursor: pointer;
+        }
       }
     }
   }

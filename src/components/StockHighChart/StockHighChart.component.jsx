@@ -1,135 +1,91 @@
-import React from 'react';
-
-//Import HighCharts
-import Highcharts from 'highcharts/highstock';
-import HighchartsReact from 'highcharts-react-official';
-import Indicators from 'highcharts/indicators/indicators-all.js';
-import DragPanes from 'highcharts/modules/drag-panes.js';
-import AnnotationsAdvanced from 'highcharts/modules/annotations-advanced.js';
-import PriceIndicator from 'highcharts/modules/price-indicator.js';
-import FullScreen from 'highcharts/modules/full-screen.js';
-import StockTools from 'highcharts/modules/stock-tools.js';
-
+import React, { useState, useEffect } from 'react';
+import ReactHighcharts from 'react-highcharts/ReactHighstock.src';
 import moment from 'moment';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import shortNumber from 'short-number';
 
-import './StockHighChart.styles.css';
-import priceData from './api_res.json';
+const StockHighChart = () => {
+  const options = { style: 'currency', currency: 'USD' };
+  const numberFormat = new Intl.NumberFormat('en-US', options);
+  const { id } = useParams();
+  const [assetData, setAssetData] = useState([]);
+  const configPrice = {
+    rangeSelector: {
+      selected: 1,
+    },
 
-// init the module
-Indicators(Highcharts);
-DragPanes(Highcharts);
-AnnotationsAdvanced(Highcharts);
-PriceIndicator(Highcharts);
-FullScreen(Highcharts);
-StockTools(Highcharts);
+    title: {
+      text: id,
+    },
 
-const options = { style: 'currency', currency: 'USD' };
-const numberFormat = new Intl.NumberFormat('en-US', options);
-
-const configPrice = {
-  yAxis: [
-    {
-      offset: 20,
-
-      labels: {
-        formatter: function () {
-          return numberFormat.format(this.value);
+    yAxis: [
+      {
+        labels: {
+          align: 'right',
+          x: -5,
         },
-        x: -15,
-        style: {
-          color: '#000',
-          position: 'absolute',
+
+        height: '60%',
+        lineWidth: 2,
+        resize: {
+          enabled: true,
         },
-        align: 'left',
-      },
-    },
-  ],
-  tooltip: {
-    shared: true,
-    formatter: function () {
-      return (
-        numberFormat.format(this.y, 0) +
-        '</b><br/>' +
-        moment(this.x).format('MMMM Do YYYY, h:mm')
-      );
-    },
-  },
-  plotOptions: {
-    series: {
-      showInNavigator: true,
-      gapSize: 6,
-    },
-  },
-  rangeSelector: {
-    selected: 1,
-  },
-  title: {
-    text: `Bitcoin stock price`,
-  },
-  chart: {
-    height: 600,
-  },
-
-  credits: {
-    enabled: false,
-  },
-
-  legend: {
-    enabled: true,
-  },
-  xAxis: {
-    type: 'date',
-  },
-  rangeSelector: {
-    buttons: [
-      {
-        type: 'day',
-        count: 1,
-        text: '1d',
       },
       {
-        type: 'day',
-        count: 7,
-        text: '7d',
-      },
-      {
-        type: 'month',
-        count: 1,
-        text: '1m',
-      },
-      {
-        type: 'month',
-        count: 3,
-        text: '3m',
-      },
-      {
-        type: 'all',
-        text: 'All',
+        labels: {
+          align: 'right',
+          x: -3,
+        },
+        title: {
+          text: 'Volume',
+        },
+        top: '65%',
+        height: '35%',
+        offset: 0,
+        lineWidth: 2,
       },
     ],
-    selected: 4,
-  },
-  //Generate chart
-  series: [
-    {
-      name: 'Price',
-      type: 'spline',
-      data: priceData.prices,
-      tooltip: {
-        valueDecimals: 2,
-      },
+
+    tooltip: {
+      split: true,
     },
-  ],
+
+    series: [
+      {
+        name: `Price`,
+        data: assetData.prices,
+        tooltip: {
+          valueDecimals: 2,
+        },
+      },
+      {
+        type: 'column',
+        name: 'Volume',
+        data: assetData.total_volumes,
+        yAxis: 1,
+      },
+    ],
+  };
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=max`
+      )
+      .then((res) => {
+        setAssetData(res.data);
+      })
+      .catch((err) => {
+        // handle error
+        console.log(err);
+      });
+  }, []);
+
+  return (
+    <div>
+      <ReactHighcharts config={configPrice}></ReactHighcharts>
+    </div>
+  );
 };
-
-const StockHighChart = () => (
-  <div>
-    <HighchartsReact
-      highcharts={Highcharts}
-      constructorType={'stockChart'}
-      options={configPrice}
-    />
-  </div>
-);
-
 export default StockHighChart;
