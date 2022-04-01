@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import ReactHighcharts from 'react-highcharts/ReactHighstock.src';
 import moment from 'moment';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import shortNumber from 'short-number';
+import { InfoContext } from '../CallsContext';
 
 const StockHighChart = () => {
   const options = { style: 'currency', currency: 'USD' };
   const numberFormat = new Intl.NumberFormat('en-US', options);
+  const { info, setInfo } = useContext(InfoContext);
   const { id } = useParams();
   const [assetData, setAssetData] = useState([]);
   const configPrice = {
@@ -80,6 +82,7 @@ const StockHighChart = () => {
         // handle error
         console.log(err);
       });
+    setInfo({ calls: info.calls + 1 });
   }, []);
 
   return (

@@ -3,15 +3,20 @@
   flex-direction: row;
   flex-wrap: wrap;
   text-align: left;
+  
+  
   .newsitem-container {
-    flex: 50%;
+    flex: 45%;
     height: 250px;
-    border: 1px black;
+    margin: 5px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    
+    
     .text-container {
       width: 50%;
+      padding: 5px 0 5px 15px;
       .newsitem-title {
         color: blue;
       }
@@ -22,14 +27,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 0 5px 0 0;
 
+      
       .newsimage {
         height: 150px;
+         border-radius: 8px;
       }
     }
   }
-  :hover {
-    background-color: beige;
+  :hover{
+    border-radius: 10px ;
+    background-color: lightgray;
     cursor: pointer;
   }
+  
 }

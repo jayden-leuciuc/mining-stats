@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import shortNumber from 'short-number';
 import './MarketDataTable.styles.scss';
+import { InfoContext } from '../CallsContext';
 
 const baseURL = 'https://api.coingecko.com/api/v3/ping';
 const otherURL =
@@ -9,22 +10,23 @@ const otherURL =
 
 function MarketDataTable() {
   const [apiData, setApiData] = useState([]);
+  const { info, setInfo } = useContext(InfoContext);
   useEffect(() => {
     axios
       .get(otherURL)
       .then((response) => {
-        console.log(response.data);
         setApiData(response.data);
       })
       .catch((err) => {
         console.log(err);
       });
+    setInfo({ calls: info.calls + 1 });
   }, []);
 
   return (
     <div className='marketdata-container'>
       <h1>Top Coins</h1>
-      <table class='marketdata-table'>
+      <table className='marketdata-table'>
         <thead>
           <tr>
             <th>Market</th>
