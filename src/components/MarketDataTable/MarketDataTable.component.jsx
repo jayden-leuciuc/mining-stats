@@ -41,12 +41,11 @@ function MarketDataTable() {
           {apiData.map((coin) => {
             return (
               <>
-                <tr onClick={() => (window.location = `/${coin.id}`)}>
+                <tr onClick={() => (window.location = `/view/${coin.id}`)}>
                   <td>{coin.market_cap_rank}</td>
                   <td>
                     <img src={coin.image} alt='#' className='coin-image'></img>
                     {coin.name}
-                    {coin.symbol}
                   </td>
                   <td>$ {coin.current_price}</td>
 

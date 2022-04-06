@@ -3,6 +3,7 @@ import './Asset.styles.scss';
 import StockHighChart from '../../components/StockHighChart/StockHighChart.component';
 import NewsFeed from '../../components/NewsFeed/NewsFeed.component';
 import Header from '../../components/Header/Header.component';
+import CoinSummary from '../../components/CoinSummary/CoinSummary.component';
 function Asset() {
   return (
     <div className='assetpage-container'>

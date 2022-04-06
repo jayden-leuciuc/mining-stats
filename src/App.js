@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage.component';
 import Asset from './pages/Asset/Asset.component';
 import StockHighChart from './components/StockHighChart/StockHighChart.component';
+import PoolsPage from './pages/PoolsPage/PoolsPage.component';
 import './App.css';
 import { InfoProvider } from './components/CallsContext';
 
@@ -13,7 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<HomePage />} className='routes' />
-          <Route path='/:id' element={<Asset />} />
+          <Route path='/pools' element={<PoolsPage />} />
+          <Route path='/view/:id' element={<Asset />} />
         </Routes>
       </BrowserRouter>
     </InfoProvider>

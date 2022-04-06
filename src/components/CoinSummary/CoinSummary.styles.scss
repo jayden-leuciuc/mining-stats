@@ -1,0 +1,17 @@
+.coinsummary-container{
+  background-color: gray;
+  width: 300px;
+  border-radius: 10px;
+  .coinsummary-header{
+    border-bottom: 1px solid black;
+  }
+  .coinsummary-snippet-container{
+      display: flex;
+      flex-wrap: wrap;
+    .coinsummary-snippet{
+      width: 50%;
+
+    }
+  }
+  
+}

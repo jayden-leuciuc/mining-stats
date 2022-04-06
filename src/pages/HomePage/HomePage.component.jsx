@@ -2,6 +2,7 @@ import React from 'react';
 import MarketDataTable from '../../components/MarketDataTable/MarketDataTable.component';
 import Footer from '../../components/Footer/Footer.component';
 import Header from '../../components/Header/Header.component';
+import CoinSummary from '../../components/CoinSummary/CoinSummary.component';
 import './HomePage.styles.scss';
 function HomePage() {
   return (
