@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './CoinSummary.styles.scss';
-import shortNumber from 'short-number';
+import { shortHash } from '../utils';
 function CoinSummary() {
   const [coinInfo, setCoinInfo] = useState({});
   useEffect(() => {
@@ -26,11 +26,11 @@ function CoinSummary() {
       <div className='coinsummary-snippet-container'>
         <div className='coinsummary-snippet'>
           <p>Total Hashrate</p>
-          <p>{coinInfo.network_hashrate}</p>
+          <p>{shortHash(coinInfo.network_hashrate)}</p>
         </div>
         <div className='coinsummary-snippet'>
           <p>Difficulty</p>
-          <p>{coinInfo.difficulty}</p>
+          <p>{shortHash(coinInfo.difficulty)}</p>
         </div>
         <div className='coinsummary-snippet'>
           <p>Block Reward</p>

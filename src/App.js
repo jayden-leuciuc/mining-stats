@@ -6,7 +6,7 @@ import Asset from './pages/Asset/Asset.component';
 import StockHighChart from './components/StockHighChart/StockHighChart.component';
 import PoolsPage from './pages/PoolsPage/PoolsPage.component';
 import './App.css';
-import { InfoProvider } from './components/CallsContext';
+import { InfoProvider } from './context/CallsContext';
 
 function App() {
   return (

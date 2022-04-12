@@ -8,7 +8,11 @@ function Asset() {
   return (
     <div className='assetpage-container'>
       <Header />
-      <StockHighChart />
+      <div className='assetpage-info-container'>
+        <StockHighChart className='stockhighchart1' />
+        <CoinSummary />
+      </div>
+
       <NewsFeed />
     </div>
   );

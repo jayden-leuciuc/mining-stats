@@ -1,5 +1,22 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  padding: 10px 20px;
+  
   align-items: center;
+  .search-container{
+    margin-left: auto;
+  }
+  .link-container{
+    justify-content: space-evenly;
+    .link-item{
+      padding: 0 10px;
+      color: black;
+      &:hover{
+        color: rgb(0, 87, 0);
+        //color: rgb(59, 59, 59);
+      }
+      
+    }
+    
+  }
 }

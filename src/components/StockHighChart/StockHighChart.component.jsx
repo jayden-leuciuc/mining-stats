@@ -4,7 +4,7 @@ import moment from 'moment';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import shortNumber from 'short-number';
-import { InfoContext } from '../CallsContext';
+import { InfoContext } from '../../context/CallsContext';
 
 const StockHighChart = () => {
   const options = { style: 'currency', currency: 'USD' };

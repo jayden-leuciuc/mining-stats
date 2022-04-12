@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import shortNumber from 'short-number';
 import './MarketDataTable.styles.scss';
-import { InfoContext } from '../CallsContext';
+import { InfoContext } from '../../context/CallsContext';
 
 const baseURL = 'https://api.coingecko.com/api/v3/ping';
 const otherURL =
@@ -41,7 +41,10 @@ function MarketDataTable() {
           {apiData.map((coin) => {
             return (
               <>
-                <tr onClick={() => (window.location = `/view/${coin.id}`)}>
+                <tr
+                  onClick={() => (window.location = `/view/${coin.id}`)}
+                  className='market-row'
+                >
                   <td>{coin.market_cap_rank}</td>
                   <td>
                     <img src={coin.image} alt='#' className='coin-image'></img>

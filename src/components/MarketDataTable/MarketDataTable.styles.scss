@@ -5,7 +5,7 @@
     border-collapse: collapse;
     width: 100%;
     tbody {
-      tr {
+      .market-row{
         border-bottom: 1px rgb(207, 207, 207) solid;
         td {
           .coin-image {
@@ -19,7 +19,7 @@
           color: red;
         }
         &:hover {
-          background-color: bisque;
+          background-color: bisque !important;
           cursor: pointer;
         }
       }
