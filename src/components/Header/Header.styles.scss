@@ -16,6 +16,11 @@
         //color: rgb(59, 59, 59);
       }
       
+      
+    }.theme-button{
+      &:hover{
+        cursor: pointer;
+      }
     }
     
   }

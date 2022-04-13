@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
 import { InfoContext } from '../../context/CallsContext';
+import { ThemeContext } from '../../context/ThemeContext';
+import { BsMoon, BsFillMoonFill } from 'react-icons/bs';
 import './Header.styles.scss';
 
 const Header = () => {
   const { info, setInfo } = useContext(InfoContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   console.log(info.calls);
   return (
     <header className='header'>
@@ -29,6 +32,7 @@ const Header = () => {
         <a href='/hardware' className='link-item'>
           Hardware
         </a>
+        <BsFillMoonFill onClick={toggleTheme} className='theme-button' />
       </div>
     </header>
   );
