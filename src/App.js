@@ -7,6 +7,7 @@ import StockHighChart from './components/StockHighChart/StockHighChart.component
 import PoolsPage from './pages/PoolsPage/PoolsPage.component';
 import HardwarePage from './pages/Hardware/HardwarePage.component';
 import ViewHardware from './components/ViewHardware/ViewHardware.component';
+import CalculatorPage from './pages/Calculator/CalculatorPage.component';
 import './App.css';
 import { InfoProvider } from './context/CallsContext';
 import { ThemeProvider } from './context/ThemeContext';
@@ -22,6 +23,7 @@ function App() {
             <Route path='/view/:id' element={<Asset />} />
             <Route path='/hardware' element={<HardwarePage />} />
             <Route path='/hardware/:id' element={<ViewHardware />} />
+            <Route path='/calculator' element={<CalculatorPage />}></Route>
           </Routes>
         </BrowserRouter>
       </InfoProvider>

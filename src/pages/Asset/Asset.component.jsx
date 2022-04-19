@@ -4,9 +4,10 @@ import StockHighChart from '../../components/StockHighChart/StockHighChart.compo
 import NewsFeed from '../../components/NewsFeed/NewsFeed.component';
 import Header from '../../components/Header/Header.component';
 import CoinSummary from '../../components/CoinSummary/CoinSummary.component';
+import Footer from '../../components/Footer/Footer.component';
 function Asset() {
   return (
-    <div className='assetpage-container'>
+    <div className='page-container'>
       <Header />
       <div className='assetpage-info-container'>
         <StockHighChart className='stockhighchart1' />
@@ -14,6 +15,7 @@ function Asset() {
       </div>
 
       <NewsFeed />
+      <Footer />
     </div>
   );
 }

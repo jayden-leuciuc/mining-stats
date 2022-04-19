@@ -1,8 +1,11 @@
-.assetpage-container {
-  padding: 0 150px;
+.page-container {
+  margin: 0 120px;
   .assetpage-info-container{
     display: flex;
     justify-content: space-evenly;
+    .stockhighchart1{
+      max-width: 500px;
+    }
     
   }
 }

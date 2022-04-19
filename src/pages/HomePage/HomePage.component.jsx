@@ -6,13 +6,12 @@ import CoinSummary from '../../components/CoinSummary/CoinSummary.component';
 import './HomePage.styles.scss';
 function HomePage() {
   return (
-    <>
-      <div className='homepage'>
-        <Header />
-        <MarketDataTable />
-      </div>
+    <div className='page-container'>
+      <Header />
+      <MarketDataTable />
+
       <Footer />
-    </>
+    </div>
   );
 }
 

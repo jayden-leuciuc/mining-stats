@@ -1,15 +1,44 @@
 .marketdata-container {
-  height: 100%;
+  
   text-align: center;
   .marketdata-table {
     border-collapse: collapse;
-    width: 100%;
+    width: fit-content;
+    thead{
+      tr{
+        :first-child{
+          padding: 0 0 0 5px;
+        }
+        :last-child{
+          padding: 0 5px 0 0;
+          
+        }
+        th{
+          text-align: left;
+          padding: 0 100px;
+        }
+      }
+    }
     tbody {
       .market-row{
         border-bottom: 1px rgb(207, 207, 207) solid;
+        :first-child{
+          padding: 0 0 0 5px;
+        }
+        :last-child{
+          padding: 0 5px 0 0;
+          
+        }
         td {
+          text-align: left;
+          padding: 0 100px;
+          
+          
           .coin-image {
             max-width: 25px;
+          }
+          :first-child{
+            margin-left: 0;
           }
         }
         .positive {
