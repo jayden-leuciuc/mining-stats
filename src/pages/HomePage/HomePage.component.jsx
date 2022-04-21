@@ -9,7 +9,6 @@ function HomePage() {
     <div className='page-container'>
       <Header />
       <MarketDataTable />
-
       <Footer />
     </div>
   );

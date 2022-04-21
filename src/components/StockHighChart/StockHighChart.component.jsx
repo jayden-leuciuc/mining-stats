@@ -13,12 +13,22 @@ const StockHighChart = () => {
   const { id } = useParams();
   const [assetData, setAssetData] = useState([]);
   const configPrice = {
+    colors: ['#f7931a', '#000'],
     rangeSelector: {
       selected: 1,
     },
 
     title: {
       text: id,
+    },
+
+    chart: {
+      backgroundColor: {
+        color: '#f7931a',
+      },
+      style: {
+        fontFamily: 'sans-serif',
+      },
     },
 
     yAxis: [
@@ -57,6 +67,7 @@ const StockHighChart = () => {
       {
         name: `Price`,
         data: assetData.prices,
+
         tooltip: {
           valueDecimals: 2,
         },
@@ -65,6 +76,9 @@ const StockHighChart = () => {
         type: 'column',
         name: 'Volume',
         data: assetData.total_volumes,
+        style: {
+          color: '#000',
+        },
         yAxis: 1,
       },
     ],

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import './Pools.styles.scss';
+
 const Pools = () => {
   const [poolData, setPoolData] = useState([]);
   useEffect(() => {
@@ -16,7 +18,7 @@ const Pools = () => {
   }, []);
 
   return (
-    <div>
+    <div className='pools-container'>
       <h1>Pools</h1>
       {poolData.map((x) => (
         <p>{x.name}</p>

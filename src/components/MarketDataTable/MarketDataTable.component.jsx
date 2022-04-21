@@ -25,7 +25,7 @@ function MarketDataTable() {
 
   return (
     <div className='marketdata-container'>
-      <h1>Top Coins</h1>
+      <h1>The Market by a Glance</h1>
       <table className='marketdata-table' align='center'>
         <thead>
           <tr>

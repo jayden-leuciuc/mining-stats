@@ -1,17 +1,39 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { InfoContext } from '../../context/CallsContext';
-import { ThemeContext } from '../../context/ThemeContext';
 import { BsMoon, BsFillMoonFill } from 'react-icons/bs';
 import './Header.styles.scss';
+import { setTheme } from '../themes';
+import logo from '../images/logo.png';
 
 const Header = () => {
   const { info, setInfo } = useContext(InfoContext);
-  const { theme, toggleTheme } = useContext(ThemeContext);
-  console.log(info.calls);
+  const [togClass, setTogClass] = useState('dark');
+  let theme = localStorage.getItem('theme');
+
+  const handleOnClick = () => {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+      setTheme('theme-light');
+      setTogClass('light');
+    } else {
+      setTheme('theme-dark');
+      setTogClass('dark');
+    }
+  };
+
+  useEffect(() => {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+      setTogClass('dark');
+    } else if (localStorage.getItem('theme') === 'theme-light') {
+      setTogClass('light');
+    }
+  }, [theme]);
+
   return (
     <header className='header'>
       <div>
-        <a href='/'>Logo</a>
+        <a href='/'>
+          <img src={logo} alt='Logo' />
+        </a>
       </div>
       <div className='search-container'>
         <input type='text' placeholder='Search' />
@@ -32,7 +54,7 @@ const Header = () => {
         <a href='/hardware' className='link-item'>
           Hardware
         </a>
-        <BsFillMoonFill onClick={toggleTheme} className='theme-button' />
+        <BsFillMoonFill onClick={handleOnClick} className='theme-button' />
       </div>
     </header>
   );

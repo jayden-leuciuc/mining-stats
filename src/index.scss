@@ -1,10 +1,41 @@
+.theme-dark {
+  --dark-text: #616161;
+  --light-text: #f9f8f8;
+  --dark-background: #020202;
+  --light-background: #353535;
+  --accent: #b8dbd9;
+  --button-border: #b8dbd9;
+}
+
+.theme-light {
+  --dark-text: #000000;
+  --light-text: #888888;
+  --dark-background: #ebebeb;
+  --light-background: #f1f0f0;
+  --accent: #dbe7e4;
+  --button-border: #5e4b56;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  background-color: var(--dark-background);
+  color: var(--dark-text);
+}
 body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  #root {
+    height: 100%;
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+  }
 }
 
 code {
@@ -15,6 +46,7 @@ code {
 .routes > * {
   height: 100vh;
 }
-a{
+a {
   text-decoration: none;
+  cursor: pointer;
 }

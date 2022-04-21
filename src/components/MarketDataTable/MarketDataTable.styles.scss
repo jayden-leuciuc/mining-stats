@@ -1,5 +1,5 @@
 .marketdata-container {
-  
+  flex-grow: 1;
   text-align: center;
   .marketdata-table {
     border-collapse: collapse;
@@ -48,7 +48,7 @@
           color: red;
         }
         &:hover {
-          background-color: bisque !important;
+          background-color: var(--light-background) !important;
           cursor: pointer;
         }
       }

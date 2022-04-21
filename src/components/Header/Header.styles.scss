@@ -1,27 +1,28 @@
 .header {
   display: flex;
   padding: 10px 20px;
-  
+  flex-shrink: 0;
   align-items: center;
-  .search-container{
+  img {
+    max-height: 50px;
+  }
+  .search-container {
     margin-left: auto;
   }
-  .link-container{
+  .link-container {
     justify-content: space-evenly;
-    .link-item{
+    .link-item {
       padding: 0 10px;
-      color: black;
-      &:hover{
+      color: var(--dark-text);
+      &:hover {
         color: rgb(0, 87, 0);
         //color: rgb(59, 59, 59);
       }
-      
-      
-    }.theme-button{
-      &:hover{
+    }
+    .theme-button {
+      &:hover {
         cursor: pointer;
       }
     }
-    
   }
 }
