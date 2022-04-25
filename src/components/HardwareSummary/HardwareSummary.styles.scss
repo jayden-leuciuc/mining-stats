@@ -1,0 +1,45 @@
+.button-container {
+  text-align: center;
+  color: var(--dark-text);
+  padding: 0 0 20px 0;
+  button {
+    margin: 0 5px;
+    background-color: transparent;
+    color: var(--light-text);
+    border-radius: 3px;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--light-background);
+    }
+  }
+}
+
+.hardwaresummary-container {
+  color: var(--light-text);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .hardwarecard-container {
+    margin-top: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    text-align: center;
+    &:hover {
+      border-color: green;
+      cursor: pointer;
+    }
+    p {
+      margin: 0;
+    }
+    .gpu-image {
+      color: white;
+      max-height: 50px;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+  }
+}

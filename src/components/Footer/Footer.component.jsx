@@ -16,6 +16,22 @@ function Footer() {
               Jayden Leuciuc
             </a>
           </p>
+          <p>
+            <a
+              href='https://www.flaticon.com/free-icons/asic'
+              title='asic icons'
+            >
+              Asic icons created by Vitaly Gorbachev - Flaticon
+            </a>
+          </p>
+          <p>
+            <a
+              href='https://www.flaticon.com/free-icons/graphic-card'
+              title='graphic card icons'
+            >
+              Graphic card icons created by rukanicon - Flaticon
+            </a>
+          </p>
         </div>
 
         <div className='footerlinks-container'>
