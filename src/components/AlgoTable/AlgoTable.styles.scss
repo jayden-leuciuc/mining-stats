@@ -1,0 +1,9 @@
+.algotable-container {
+  flex-grow: 2;
+  .algotable-table {
+    width: 100%;
+    th {
+      text-align: left;
+    }
+  }
+}

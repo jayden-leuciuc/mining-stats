@@ -1,6 +1,9 @@
-.gpuspecs-container {
+.hardwarespecs-container {
   background-color: transparent;
+  border-radius: 7px;
   max-width: fit-content;
   padding: 10px;
   border: 1px solid var(--dark-text);
+  height: max-content;
+  margin-top: 10px;
 }

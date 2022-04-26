@@ -1,6 +1,6 @@
 export function shortHash(num) {
   if (Math.abs(num) < 1000) {
-    return num;
+    return num + 'H/s';
   }
 
   var shortNumber;
@@ -30,4 +30,8 @@ export function shortHash(num) {
   }
 
   return sign + shortNumber;
+}
+
+export function electricCalculator(hourUsage, electricCost, powerUsage) {
+  return ((hourUsage * electricCost * powerUsage) / 1000).toFixed(2);
 }
