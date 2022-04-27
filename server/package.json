@@ -1,0 +1,20 @@
+{
+  "name": "mining-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayden-leuciuc/mining-stats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayden-leuciuc/mining-stats/issues"
+  },
+  "homepage": "https://github.com/jayden-leuciuc/mining-stats#readme"
+}
