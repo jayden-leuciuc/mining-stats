@@ -1,4 +1,18 @@
-.pools-container{
-  flex-grow: 1;
-  flex-shrink: 0;
+.pools-container {
+  width: 100%;
+  text-align: center;
+  .pools-table {
+    width: 100%;
+    tbody {
+      td:last-of-type {
+        max-width: 100px;
+      }
+    }
+  }
+  button {
+    &:hover {
+      cursor: pointer;
+      background-color: black;
+    }
+  }
 }

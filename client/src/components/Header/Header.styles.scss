@@ -6,11 +6,9 @@
   img {
     max-height: 50px;
   }
-  .search-container {
-    margin-left: auto;
-  }
   .link-container {
     justify-content: space-evenly;
+    margin-left: auto;
     .link-item {
       padding: 0 10px;
       color: var(--dark-text);

@@ -35,9 +35,6 @@ const Header = () => {
           <img src={logo} alt='Logo' />
         </a>
       </div>
-      <div className='search-container'>
-        <input type='text' placeholder='Search' />
-      </div>
       <div className='link-container'>
         <a href='/calculator' className='link-item'>
           Calculator
