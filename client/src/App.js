@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage.component';
+import Calculator from './pages/Calculator/CalculatorPage.component';
+import Exchange from './pages/Exchange/ExchangePage.component';
+import HardwareCalculator from './pages/HardwareCalculator/HardwareCalculatorPage.component';
 import * as Component from './components/componentExport';
-import Asset from './pages/Asset/Asset.component';
+import Asset from './pages/Asset/AssetPage.component';
 import StaticPageTemplate from './pages/StaticPageTemplate/StaticPageTemplate.component';
 import './App.css';
 
@@ -29,6 +32,10 @@ function App() {
             element={
               <StaticPageTemplate componentToPassDown={<Component.About />} />
             }
+          />
+          <Route
+            path='/exchange'
+            element={<StaticPageTemplate componentToPassDown={<Exchange />} />}
           />
           <Route
             path='/faq'
@@ -78,11 +85,17 @@ function App() {
           <Route
             path='/calculator'
             element={
-              <StaticPageTemplate
-                componentToPassDown={<Component.Calculator />}
-              />
+              <StaticPageTemplate componentToPassDown={<Calculator />} />
             }
           />
+          <Route
+            path='/calculator/coin/:id'
+            element={
+              <StaticPageTemplate
+                componentToPassDown={<HardwareCalculator />}
+              />
+            }
+          ></Route>
         </Routes>
       </BrowserRouter>
     </InfoProvider>

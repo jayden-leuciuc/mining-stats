@@ -1,0 +1,32 @@
+.miningcoins-container {
+  flex-grow: 1;
+
+  .miningcoin-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .miningcard-container {
+      text-align: center;
+      background-color: white;
+      width: 200px;
+      height: 200px;
+      margin: 5px;
+      .miningcardtag-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        p {
+          background-color: black;
+          border-radius: 3px;
+        }
+        .hide {
+          opacity: 20%;
+        }
+        .show {
+          background-color: green;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jayden-leuciuc/mining-stats/issues"
   },
-  "homepage": "https://github.com/jayden-leuciuc/mining-stats#readme"
+  "homepage": "https://github.com/jayden-leuciuc/mining-stats#readme",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
 }
