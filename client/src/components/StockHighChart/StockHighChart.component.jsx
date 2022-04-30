@@ -86,9 +86,7 @@ const StockHighChart = () => {
 
   useEffect(() => {
     axios
-      .get(
-        `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=max`
-      )
+      .get(`http://localhost:3001/api/coin/${id}`)
       .then((res) => {
         setAssetData(res.data);
       })
@@ -96,12 +94,11 @@ const StockHighChart = () => {
         // handle error
         console.log(err);
       });
-    setInfo({ calls: info.calls + 1 });
   }, []);
 
   return (
     <div>
-      <ReactHighcharts config={configPrice}></ReactHighcharts>
+      <ReactHighcharts config={configPrice} />
     </div>
   );
 };

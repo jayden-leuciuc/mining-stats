@@ -8,7 +8,6 @@ function CoinSummary() {
     axios
       .get('https://api.minerstat.com/v2/coins?list=BTC')
       .then((response) => {
-        console.log(response.data);
         setCoinInfo(response.data[0]);
       })
       .catch((error) => {

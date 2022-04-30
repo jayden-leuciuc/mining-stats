@@ -5,7 +5,7 @@ import Calculator from './pages/Calculator/CalculatorPage.component';
 import Exchange from './pages/Exchange/ExchangePage.component';
 import HardwareCalculator from './pages/HardwareCalculator/HardwareCalculatorPage.component';
 import * as Component from './components/componentExport';
-import Asset from './pages/Asset/AssetPage.component';
+import AssetPage from './pages/Asset/AssetPage.component';
 import StaticPageTemplate from './pages/StaticPageTemplate/StaticPageTemplate.component';
 import './App.css';
 
@@ -65,7 +65,10 @@ function App() {
               />
             }
           />
-          <Route path='/view/:id' element={<Asset />} />
+          <Route
+            path='/view/:id'
+            element={<StaticPageTemplate componentToPassDown={<AssetPage />} />}
+          />
           <Route
             path='/hardware'
             element={

@@ -2,6 +2,7 @@ import React from 'react';
 
 import About from './About/About.component';
 import CoinSummary from './CoinSummary/CoinSummary.component';
+import CoinDescription from './CoinDescription/CoinDescription.component';
 import Contact from './Contact/Contact.component';
 import ExchangeCard from './ExchangeCard/ExchangeCard.component';
 import FAQ from './FAQ/FAQ.component';
@@ -22,6 +23,7 @@ import ViewHardware from './ViewHardware/ViewHardware.component';
 export {
   About,
   CoinSummary,
+  CoinDescription,
   Contact,
   ExchangeCard,
   FAQ,
