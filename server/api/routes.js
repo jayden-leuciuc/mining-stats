@@ -4,7 +4,7 @@ var coinCtrl = require('./coin.js');
 var router = express.Router();
 
 async function getCoinMarketData(req, res) {
-  res.json({ status: 'ok' });
+  res.json({ status: 'ok!!!' });
 }
 
 router.route('/').get(getCoinMarketData);
