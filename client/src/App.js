@@ -58,6 +58,14 @@ function App() {
             }
           />
           <Route
+            path='/contact/success'
+            element={
+              <StaticPageTemplate
+                componentToPassDown={<Component.InputSuccess />}
+              />
+            }
+          />
+          <Route
             path='/terms'
             element={
               <StaticPageTemplate

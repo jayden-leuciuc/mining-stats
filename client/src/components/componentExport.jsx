@@ -17,7 +17,7 @@ import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy.component';
 import StockHighChart from './StockHighChart/StockHighChart.component';
 import TermsOfService from './Terms/TermsOfService.component';
 import ViewHardware from './ViewHardware/ViewHardware.component';
-
+import InputSuccess from './InputSuccess/InputSuccess.component';
 export {
   About,
   CoinSummary,
@@ -38,4 +38,5 @@ export {
   StockHighChart,
   TermsOfService,
   ViewHardware,
+  InputSuccess,
 };
