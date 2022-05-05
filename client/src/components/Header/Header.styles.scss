@@ -3,17 +3,19 @@
   padding: 10px 20px;
   flex-shrink: 0;
   align-items: center;
+  border-bottom: 1px solid;
   img {
     max-height: 50px;
+    margin-top: 5px;
   }
   .link-container {
     justify-content: space-evenly;
     margin-left: auto;
     .link-item {
       padding: 0 10px;
-      color: var(--dark-text);
+      color: var(--text-color);
       &:hover {
-        color: rgb(0, 87, 0);
+        color: var(--accent);
         //color: rgb(59, 59, 59);
       }
     }

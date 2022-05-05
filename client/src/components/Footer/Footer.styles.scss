@@ -1,7 +1,7 @@
 .footer {
   margin-top: 30px;
   width: 100%;
-  background-color: var(--dark-background);
+  background-color: var(--background);
   display: flex;
   flex-direction: row;
   .logocredit-container {
@@ -12,10 +12,10 @@
     }
     p {
       a {
-        color: var(--light-text);
+        color: var(-text-color);
       }
       :hover {
-        color: var(--dark-text) !important;
+        color: var(--accent) !important;
       }
     }
   }
@@ -29,6 +29,7 @@
       height: auto;
       p {
         margin-top: 0;
+        color: var(--secondary);
       }
       ul {
         list-style-type: none;
@@ -37,11 +38,11 @@
           cursor: pointer;
           text-align: left;
           :hover {
-            color: var(--dark-text) !important;
+            color: var(--accent) !important;
           }
           .link {
             text-align: left !important;
-            color: var(--light-text);
+            color: var(--text-color);
           }
         }
       }

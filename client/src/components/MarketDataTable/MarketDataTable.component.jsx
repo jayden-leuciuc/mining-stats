@@ -46,9 +46,9 @@ function MarketDataTable() {
                   className='market-row'
                 >
                   <td>{coin.market_cap_rank}</td>
-                  <td>
+                  <td className='img-td'>
                     <img src={coin.image} alt='#' className='coin-image'></img>
-                    {coin.name}
+                    <p>{coin.name}</p>
                   </td>
                   <td>$ {coin.current_price}</td>
 

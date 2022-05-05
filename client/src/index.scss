@@ -1,25 +1,21 @@
 .theme-dark {
-  --dark-text: #616161;
-  --light-text: #f9f8f8;
-  --dark-background: #020202;
-  --light-background: #353535;
-  --accent: #b8dbd9;
-  --button-border: #b8dbd9;
+  --background: #0a1224;
+  --text-color: #ffffff;
+  --secondary: #b9b9b9;
+  --accent: #fca311;
 }
 
 .theme-light {
-  --dark-text: #000000;
-  --light-text: #888888;
-  --dark-background: #ebebeb;
-  --light-background: #f1f0f0;
-  --accent: #dbe7e4;
-  --button-border: #5e4b56;
+  --background: #ffffff;
+  --text-color: #000000;
+  --secondary: #bdbdbd;
+  --accent: #fca311;
 }
 
 html {
   height: 100%;
   width: 100%;
-  background-color: var(--dark-background);
+  background-color: var(--background);
   color: var(--dark-text);
 }
 body {

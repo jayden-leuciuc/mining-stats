@@ -1,43 +1,45 @@
 .marketdata-container {
   flex-grow: 1;
   text-align: center;
+  color: var(--text-color);
   .marketdata-table {
     border-collapse: collapse;
-    width: fit-content;
-    thead{
-      tr{
-        :first-child{
+    width: 100%;
+    thead {
+      tr {
+        border-spacing: 0;
+        width: 100%;
+        :first-child {
           padding: 0 0 0 5px;
         }
-        :last-child{
+        :last-child {
           padding: 0 5px 0 0;
-          
         }
-        th{
+        th {
           text-align: left;
-          padding: 0 100px;
         }
       }
     }
     tbody {
-      .market-row{
-        border-bottom: 1px rgb(207, 207, 207) solid;
-        :first-child{
+      .market-row {
+        :first-child {
           padding: 0 0 0 5px;
         }
-        :last-child{
-          padding: 0 5px 0 0;
-          
-        }
+
         td {
+          border-bottom: 1px rgb(207, 207, 207) solid;
           text-align: left;
-          padding: 0 100px;
-          
-          
+          vertical-align: middle;
+          p {
+            display: inline;
+            vertical-align: middle;
+          }
           .coin-image {
             max-width: 25px;
+            padding-right: 10px;
+            vertical-align: middle;
           }
-          :first-child{
+          :first-child {
             margin-left: 0;
           }
         }
@@ -48,7 +50,7 @@
           color: red;
         }
         &:hover {
-          background-color: var(--light-background) !important;
+          background-color: var(--accent);
           cursor: pointer;
         }
       }
