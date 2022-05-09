@@ -1,0 +1,59 @@
+.marketdata-container {
+  flex-grow: 1;
+  text-align: center;
+  color: var(--text-color);
+  .marketdata-table {
+    border-collapse: collapse;
+    width: 100%;
+    thead {
+      tr {
+        border-spacing: 0;
+        width: 100%;
+        :first-child {
+          padding: 0 0 0 5px;
+        }
+        :last-child {
+          padding: 0 5px 0 0;
+        }
+        th {
+          text-align: left;
+        }
+      }
+    }
+    tbody {
+      .market-row {
+        :first-child {
+          padding: 0 0 0 5px;
+        }
+
+        td {
+          border-bottom: 1px rgb(207, 207, 207) solid;
+          text-align: left;
+          vertical-align: middle;
+          p {
+            display: inline;
+            vertical-align: middle;
+          }
+          .coin-image {
+            max-width: 25px;
+            padding-right: 10px;
+            vertical-align: middle;
+          }
+          :first-child {
+            margin-left: 0;
+          }
+        }
+        .positive {
+          color: green;
+        }
+        .negative {
+          color: red;
+        }
+        &:hover {
+          background-color: var(--accent);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

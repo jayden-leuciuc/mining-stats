@@ -1,0 +1,7 @@
+.viewhardware-container {
+  display: flex;
+  flex-direction: row;
+  .hardware-left-container {
+    flex-grow: 2;
+  }
+}
