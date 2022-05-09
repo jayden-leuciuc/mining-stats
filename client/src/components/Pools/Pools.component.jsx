@@ -70,14 +70,14 @@ const Pools = () => {
                   ))}
                 </td>
               ) : (
-                '-'
+                <td>-</td>
               )}
             </tr>
           ))}
         </tbody>
       </table>
       {numPools - numShownPools > 15 ? (
-        <button onClick={() => loadMore(15)}>
+        <button onClick={() => loadMore(15)} className='loadmore-button'>
           Load more ({numPools - numShownPools})
         </button>
       ) : (

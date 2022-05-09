@@ -13,7 +13,7 @@ function Footer() {
           <p>
             Site created by{' '}
             <a href='https://jaydenleuciuc.com' target='_blank'>
-              Jayden Leuciuc
+              <span id='personal'>Jayden Leuciuc</span>
             </a>
           </p>
           <p>
@@ -38,11 +38,12 @@ function Footer() {
           <div className='column'>
             <p>Company</p>
             <ul>
+              {/* 
               <li>
                 <Link to='/about' className='link'>
                   About Us
                 </Link>
-              </li>
+              </li>*/}
               <li>
                 <Link to='/terms' className='link'>
                   Terms of Service
@@ -63,11 +64,12 @@ function Footer() {
                   Contact Us
                 </Link>
               </li>
+              {/* 
               <li>
                 <Link to='/faq' className='link'>
                   FAQ
                 </Link>
-              </li>
+              </li>*/}
             </ul>
           </div>
 

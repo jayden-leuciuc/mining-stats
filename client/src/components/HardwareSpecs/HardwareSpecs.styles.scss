@@ -1,9 +1,14 @@
 .hardwarespecs-container {
+  margin-top: 50px;
+  color: var(--text-color);
   background-color: transparent;
   border-radius: 7px;
-  max-width: fit-content;
-  padding: 10px;
-  border: 1px solid var(--dark-text);
+  width: 250px;
+  text-align: center;
+  border: 1px solid rgb(207, 207, 207);
   height: max-content;
-  margin-top: 10px;
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
 }

@@ -1,4 +1,5 @@
 .contact-container {
+  color: var(--text-color);
   label {
     display: block;
     padding: 5px 0;
@@ -13,6 +14,10 @@
   .form-button {
     display: block;
     margin-top: 25px;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--accent);
+    }
   }
   .contact-submit-button {
     border-radius: 3px;

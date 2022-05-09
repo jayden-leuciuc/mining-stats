@@ -27,6 +27,7 @@ function HardwareSpecs({ specData }) {
         <p>Loading</p>
       ) : (
         <div>
+          <h1>Specs</h1>
           {Object.keys(specData).map((key, i) => (
             <p key={key}>
               {key} : {specData[key]}

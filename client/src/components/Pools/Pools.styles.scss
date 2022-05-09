@@ -1,18 +1,28 @@
 .pools-container {
-  width: 100%;
+  color: var(--text-color);
   text-align: center;
+  padding: 50px 0 50px;
   .pools-table {
     width: 100%;
+    border-spacing: 0 20px;
+
     tbody {
+      td {
+        border-top: 1px rgb(207, 207, 207) solid;
+        vertical-align: middle;
+      }
       td:last-of-type {
         max-width: 100px;
       }
     }
   }
+  .loadmore-button {
+    margin-top: 20px;
+  }
   button {
     &:hover {
       cursor: pointer;
-      background-color: black;
+      background-color: var(--accent);
     }
   }
 }

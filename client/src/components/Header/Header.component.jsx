@@ -36,10 +36,11 @@ const Header = () => {
         </a>
       </div>
       <div className='link-container'>
+        {/* 
         <a href='/calculator' className='link-item'>
           Calculator
         </a>
-
+*/}
         {/* <h1>Number of calls: {info.calls}</h1> 
       <button onClick={() => setInfo({ calls: info.calls + 1 })}>
         add call

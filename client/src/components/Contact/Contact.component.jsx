@@ -1,8 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Contact.styles.scss';
 
 function Contact() {
+  const navigate = useNavigate();
+  const save = (e) => {
+    e.preventDefault();
+    navigate('/');
+  };
   return (
     <div className='contact-container'>
       <form>
@@ -17,9 +22,13 @@ function Contact() {
 
         <label for='details'>Details</label>
         <input type='text' id='details' name='details' className='details' />
-        <Link to='/' className='contact-submit-button'>
-          <input type='submit' value='Submit' className='form-button'></input>
-        </Link>
+
+        <input
+          type='submit'
+          value='Submit'
+          className='form-button'
+          onClick={save}
+        ></input>
       </form>
     </div>
   );
