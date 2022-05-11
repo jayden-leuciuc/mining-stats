@@ -1,8 +1,17 @@
-const express = require('express');
+var express = require('express');
+var cors = require('cors');
 var routes = require('./api/routes');
+const path = require('path'); // Serve static files from the React frontend app
 
 const PORT = process.env.PORT || 3001;
-const app = express();
+var app = express();
+
+app.use(cors());
+
+app.use(express.static(path.join(__dirname, 'client/build'))); // Anything that doesn't match the above, send back index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+});
 
 app.use('/api', routes);
 
