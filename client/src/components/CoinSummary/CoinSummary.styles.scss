@@ -1,18 +1,17 @@
-.coinsummary-container{
-  background-color: gray;
+.coinsummary-container {
+  border: 1px solid rgb(207, 207, 207);
   width: 300px;
   border-radius: 10px;
   text-align: center;
-  .coinsummary-header{
-    border-bottom: 1px solid black;
+  color: var(--text-color);
+  .coinsummary-header {
+    border-bottom: 1px solid rgb(207, 207, 207);
   }
-  .coinsummary-snippet-container{
-      display: flex;
-      flex-wrap: wrap;
-    .coinsummary-snippet{
+  .coinsummary-snippet-container {
+    display: flex;
+    flex-wrap: wrap;
+    .coinsummary-snippet {
       width: 50%;
-
     }
   }
-  
 }

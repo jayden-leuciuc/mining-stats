@@ -3,22 +3,24 @@
   flex-direction: row;
   flex-wrap: wrap;
   text-align: left;
-  
-  
+  margin-top: 50px;
+
   .newsitem-container {
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
     flex: 45%;
     height: 250px;
     margin: 5px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    
-    
+
     .text-container {
       width: 50%;
       padding: 5px 0 5px 15px;
+      color: var(--text-color);
       .newsitem-title {
-        color: blue;
+        color: var(--accent);
       }
     }
     .image-container {
@@ -29,17 +31,15 @@
       align-items: center;
       padding: 0 5px 0 0;
 
-      
       .newsimage {
         height: 150px;
-         border-radius: 8px;
+        border-radius: 8px;
       }
     }
   }
-  :hover{
-    border-radius: 10px ;
-    background-color: lightgray;
+  :hover {
+    border-radius: 10px;
+    background-color: #cfcfcf;
     cursor: pointer;
   }
-  
 }

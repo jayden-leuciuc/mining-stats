@@ -1,13 +1,13 @@
 var express = require('express');
 var cors = require('cors');
-var apiRoutes = require('./api/coin.js');
-const path = require('path'); // Serve static files from the React frontend app
+var apiRoutes = require('./serverApi/coin.js');
+const path = require('path');
 
 const PORT = process.env.PORT || 3001;
 
 var app = express();
 
-app.use(express.static(path.join(__dirname, 'client/build'))); // Anything that doesn't match the above, send back index.html
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use(cors());
 
