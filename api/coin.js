@@ -2,6 +2,9 @@ const axios = require('axios');
 require('dotenv').config();
 
 module.exports = {
+  testApi: async function (req, res) {
+    res.json({ status: 'Ok' });
+  },
   getCoinMarketData: async function (req, res) {
     try {
       const response = await axios.get(
