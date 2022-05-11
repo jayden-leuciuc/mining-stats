@@ -50,7 +50,7 @@ function MarketDataTable() {
                     <img src={coin.image} alt='#' className='coin-image'></img>
                     <p>{coin.name}</p>
                   </td>
-                  <td>$ {coin.current_price}</td>
+                  <td>$ {coin.current_price.toFixed(2)}</td>
 
                   <td
                     className={

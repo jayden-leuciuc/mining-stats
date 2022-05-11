@@ -17,10 +17,9 @@ function CoinSummary() {
   return (
     <div className='coinsummary-container'>
       <div className='coinsummary-header'>
-        <p>
-          <h3>MiningStats</h3>
+        <h3>
           {coinInfo.coin} - {coinInfo.algorithm}
-        </p>
+        </h3>
       </div>
       <div className='coinsummary-snippet-container'>
         <div className='coinsummary-snippet'>

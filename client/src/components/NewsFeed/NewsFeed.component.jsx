@@ -12,8 +12,9 @@ const NewsFeed = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/coinNews/${id}`)
+      .get(`/api/coinNews/${id}`)
       .then((res) => {
+        console.log(id);
         console.log(res.data);
         setNewsArray(res.data.articles);
         setIsFetching(false);

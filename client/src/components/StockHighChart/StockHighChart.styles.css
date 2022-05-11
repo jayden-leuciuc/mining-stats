@@ -1,2 +1,6 @@
 @import 'https://code.highcharts.com/css/stocktools/gui.css';
 @import 'https://code.highcharts.com/css/annotations/popup.css';
+
+.reacthighcharts2{
+  flex-grow: 3 !important;
+}
