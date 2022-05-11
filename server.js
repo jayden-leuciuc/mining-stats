@@ -11,13 +11,13 @@ app.use(express.static(path.join(__dirname, 'client/build'))); // Anything that 
 
 app.use(cors());
 
-app.get('/api', cors(), apiRoutes.testApi);
+app.get('/api', apiRoutes.testApi);
 
-app.get('/api/coin/:id', cors(), apiRoutes.getCoinMarketData);
+app.get('/api/coin/:id', apiRoutes.getCoinMarketData);
 
-app.get('/api/coinInfo/:id', cors(), apiRoutes.getCoinDescription);
+app.get('/api/coinInfo/:id', apiRoutes.getCoinDescription);
 
-app.get('/api/coinNews/:id', cors(), apiRoutes.getCoinNews);
+app.get('/api/coinNews/:id', apiRoutes.getCoinNews);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
