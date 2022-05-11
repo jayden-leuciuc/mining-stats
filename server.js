@@ -8,13 +8,13 @@ var app = express();
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, 'client/build'))); // Anything that doesn't match the above, send back index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
-
 app.use('/api', routes);
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
+});
+
+app.use(express.static(path.join(__dirname, 'client/build'))); // Anything that doesn't match the above, send back index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
