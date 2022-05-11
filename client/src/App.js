@@ -7,7 +7,6 @@ import HardwareCalculator from './pages/HardwareCalculator/HardwareCalculatorPag
 import * as Component from './components/componentExport';
 import AssetPage from './pages/Asset/AssetPage.component';
 import StaticPageTemplate from './pages/StaticPageTemplate/StaticPageTemplate.component';
-import './App.css';
 
 import { InfoProvider } from './context/CallsContext';
 import { keepTheme } from './components/themes';
