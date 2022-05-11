@@ -86,7 +86,7 @@ const StockHighChart = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/coin/${id}`)
+      .get(`/api/coin/${id}`)
       .then((res) => {
         setAssetData(res.data);
       })
