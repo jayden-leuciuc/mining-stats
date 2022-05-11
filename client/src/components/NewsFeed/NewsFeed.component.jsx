@@ -14,6 +14,7 @@ const NewsFeed = () => {
     axios
       .get(`/api/coinNews/${id}`)
       .then((res) => {
+        console.log(id);
         console.log(res.data);
         setNewsArray(res.data.articles);
         setIsFetching(false);
