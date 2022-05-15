@@ -17,7 +17,9 @@ React, Express, HighCharts, Sass
 
 ## APIs
 
-[CoinGecko](https://www.coingecko.com/en/api) [MinerStat](https://api.minerstat.com/) [Free News](https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/free-news/)
+- [CoinGecko](https://www.coingecko.com/en/api) 
+- [MinerStat](https://api.minerstat.com/) 
+- [Free News](https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/free-news/)
 
 ## View project
 
