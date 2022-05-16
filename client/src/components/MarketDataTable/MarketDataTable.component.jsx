@@ -16,6 +16,7 @@ function MarketDataTable() {
       .get(otherURL)
       .then((response) => {
         setApiData(response.data);
+        console.log(response.data);
       })
       .catch((err) => {
         console.log(err);
