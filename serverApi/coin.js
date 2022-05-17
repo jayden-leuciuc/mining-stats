@@ -26,6 +26,26 @@ module.exports = {
     }
   },
 
+  getAllPools: async function (req, res) {
+    try {
+      const response = await axios.get(`https://api.minerstat.com/v2/pools?`);
+      res.json(response.data);
+    } catch (err) {
+      res.send(err);
+    }
+  },
+
+  getPool: async function (req, res) {
+    try {
+      const response = await axios.get(
+        `https://api.minerstat.com/v2/pools?${req.params.id}`
+      );
+      res.json(response.data);
+    } catch (err) {
+      res.send(err);
+    }
+  },
+
   getCoinNews: function (req, res) {
     const options = {
       method: 'GET',

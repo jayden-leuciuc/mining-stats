@@ -19,6 +19,10 @@ app.get('/api/coinInfo/:id', apiRoutes.getCoinDescription);
 
 app.get('/api/coinNews/:id', apiRoutes.getCoinNews);
 
+app.get('/api/pools', apiRoutes.getAllPools);
+
+app.get('/api/pools/:id', apiRoutes.getPool);
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
