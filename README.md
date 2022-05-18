@@ -23,4 +23,4 @@ React, Express, HighCharts, Sass
 
 ## View project
 
-View the hosted project [here](https://online-store-jaydenl.herokuapp.com/) \*Note may take a minute to load
+View the hosted project [here](https://miningstatsjl.herokuapp.com) \*Note may take a minute to load
