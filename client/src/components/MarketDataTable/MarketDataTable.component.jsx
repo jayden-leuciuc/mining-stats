@@ -10,18 +10,15 @@ const otherURL =
 
 function MarketDataTable() {
   const [apiData, setApiData] = useState([]);
-  const { info, setInfo } = useContext(InfoContext);
   useEffect(() => {
     axios
       .get(otherURL)
       .then((response) => {
         setApiData(response.data);
-        console.log(response.data);
       })
       .catch((err) => {
         console.log(err);
       });
-    setInfo({ calls: info.calls + 1 });
   }, []);
 
   return (

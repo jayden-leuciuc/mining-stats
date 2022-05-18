@@ -17,8 +17,8 @@ const AlgoTable = ({ algoData }) => {
         </thead>
         <tbody>
           {Object.keys(algoData).map((key, i) => (
-            <tr>
-              <td key={i}>{key}</td>
+            <tr key={key}>
+              <td>{key}</td>
               <td>{shortHash(algoData[key].speed)}</td>
               <td>{algoData[key].power}</td>
               <td>-{electricCalculator(24, 0.1, algoData[key].power)}</td>

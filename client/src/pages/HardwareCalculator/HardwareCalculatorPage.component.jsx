@@ -6,7 +6,6 @@ import { useParams } from 'react-router-dom';
 
 const HardwareCalculator = () => {
   const { id } = useParams();
-  console.log(staticData);
   return (
     <div className='hardwarecalculatorpage-container'>
       <h1>HardwareCalculator Page - Id: {id}</h1>

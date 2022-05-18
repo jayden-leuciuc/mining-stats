@@ -5,7 +5,6 @@ import './MiningCoins.styles.scss';
 import data from './calculators.json';
 
 const MiningCoins = () => {
-  console.log(Object.keys(data.coins));
   const filtered = data.coins;
   return (
     <div className='miningcoins-container'>
@@ -13,6 +12,7 @@ const MiningCoins = () => {
       <div className='miningcoin-container'>
         {Object.keys(filtered).map((key, i) => (
           <div
+            key={key}
             className='miningcard-container'
             onClick={() =>
               (window.location = `/calculator/coin/${filtered[key].id}`)
@@ -31,7 +31,6 @@ const MiningCoins = () => {
                 Testing{' '}
               </p>
             </div>
-            {console.log(filtered[key])}
           </div>
         ))}
       </div>
