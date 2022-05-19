@@ -2,31 +2,27 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import './NewsFeed.styles.scss';
-import data from './NewsFeed.json';
 
 const NewsFeed = () => {
   const [newsArray, setNewsArray] = useState([]);
   const [isFetching, setIsFetching] = useState(true);
   const { id } = useParams();
-  const staticData = data.slice(0, 6);
+
+  function truncate(str) {
+    return str.length > 40 ? str.substring(0, 100) + '...' : str;
+  }
 
   useEffect(() => {
     axios
       .get(`/api/coinNews/${id}`)
       .then((res) => {
-        console.log(id);
-        console.log(res.data);
         setNewsArray(res.data.articles);
         setIsFetching(false);
       })
       .catch((err) => {
-        // handle error
         console.log(err);
       });
   }, []);
-  function truncate(str) {
-    return str.length > 40 ? str.substring(0, 100) + '...' : str;
-  }
 
   return (
     <div className='cryptoNews-container'>

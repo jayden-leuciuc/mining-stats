@@ -1,6 +1,10 @@
 import React from 'react';
-
-function Exchange() {
-  return <div>Exchange</div>;
+import { Exchange } from '../../components/componentExport';
+function ExchangePage() {
+  return (
+    <>
+      <Exchange />
+    </>
+  );
 }
-export default Exchange;
+export default ExchangePage;

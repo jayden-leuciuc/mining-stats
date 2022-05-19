@@ -1,7 +1,10 @@
 var express = require('express');
 var cors = require('cors');
-var apiRoutes = require('./serverApi/coin.js');
 const path = require('path');
+
+var coinRoute = require('./serverApi/coin.js');
+var hardwareRoute = require('./serverApi/hardware.js');
+var exchangeRoute = require('./serverApi/exchange');
 
 const PORT = process.env.PORT || 3001;
 
@@ -11,17 +14,30 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use(cors());
 
-app.get('/api', apiRoutes.testApi);
+//Base Route
 
-app.get('/api/coin/:id', apiRoutes.getCoinMarketData);
+app.get('/api', coinRoute.testApi);
 
-app.get('/api/coinInfo/:id', apiRoutes.getCoinDescription);
+//Coin Routes
 
-app.get('/api/coinNews/:id', apiRoutes.getCoinNews);
+app.get('/api/coin/:id', coinRoute.getCoinMarketData);
 
-app.get('/api/pools', apiRoutes.getAllPools);
+app.get('/api/mineableCoin', coinRoute.getMineableCoins);
 
-app.get('/api/pools/:id', apiRoutes.getPool);
+app.get('/api/coinInfo/:id', coinRoute.getCoinDescription);
+
+app.get('/api/coinNews/:id', coinRoute.getCoinNews);
+
+app.get('/api/pools', coinRoute.getAllPools);
+
+app.get('/api/pools/:id', coinRoute.getPool);
+
+//Hardware Routes
+
+app.get('/api/hardware', hardwareRoute.getAllHardware);
+
+//Exchange Routes
+app.get('/api/exchange', exchangeRoute.getExchange);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));

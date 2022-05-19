@@ -26,6 +26,17 @@ module.exports = {
     }
   },
 
+  getMineableCoins: async function (req, res) {
+    try {
+      const response = await axios.get(
+        `https://whattomine.com/calculators.json`
+      );
+      res.json(response.data);
+    } catch (err) {
+      res.send(err);
+    }
+  },
+
   getAllPools: async function (req, res) {
     try {
       const response = await axios.get(`https://api.minerstat.com/v2/pools?`);

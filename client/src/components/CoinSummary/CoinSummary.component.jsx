@@ -4,6 +4,7 @@ import './CoinSummary.styles.scss';
 import { shortHash } from '../utils';
 function CoinSummary() {
   const [coinInfo, setCoinInfo] = useState({});
+
   useEffect(() => {
     axios
       .get('https://api.minerstat.com/v2/coins?list=BTC')
