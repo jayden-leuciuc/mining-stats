@@ -6,9 +6,4 @@ describe('NewsFeed', () => {
   it('renders NewsFeed component without error', () => {
     render(<NewsFeed />);
   });
-
-  it('gets news from api and renders', async () => {
-    render(<NewsFeed />);
-    expect(await findByText(/fool.com/i)).toBeInTheDocument();
-  });
 });

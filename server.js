@@ -26,6 +26,8 @@ app.get('/api/mineableCoin', coinRoute.getMineableCoins);
 
 app.get('/api/coinInfo/:id', coinRoute.getCoinDescription);
 
+app.get('/api/coinMineableInfo/:id', coinRoute.getCoinMineableData);
+
 app.get('/api/coinNews/:id', coinRoute.getCoinNews);
 
 app.get('/api/pools', coinRoute.getAllPools);

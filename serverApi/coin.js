@@ -5,6 +5,17 @@ module.exports = {
   testApi: async function (req, res) {
     res.json({ status: 'Ok' });
   },
+  getCoinMineableData: async function (req, res) {
+    try {
+      const response = await axios.get(`https://api.minerstat.com/v2/coins`);
+      res.json(
+        response.data.filter((item) => item.name.toLowerCase() == req.params.id)
+      );
+    } catch (err) {
+      res.send(err);
+    }
+  },
+
   getCoinMarketData: async function (req, res) {
     try {
       const response = await axios.get(

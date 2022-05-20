@@ -31,7 +31,8 @@
     "request-promise-native": "^1.0.9"
   },
   "devDependencies": {
-    "concurrently": "^7.1.0"
+    "concurrently": "^7.1.0",
+    "msw": "^0.40.2"
   },
   "engines": {
     "node": "14.x"
