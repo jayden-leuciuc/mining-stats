@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import shortNumber from 'short-number';
 import './MarketDataTable.styles.scss';
-import { InfoContext } from '../../context/CallsContext';
 
 const baseURL = 'https://api.coingecko.com/api/v3/ping';
 const otherURL =

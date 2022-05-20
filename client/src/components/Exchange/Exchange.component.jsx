@@ -63,7 +63,11 @@ const Exchange = () => {
           />
           <select onChange={handleBaseChange}>
             {filteredCL.map((item) => {
-              return <option value={item.id}>{item.name}</option>;
+              return (
+                <option value={item.id} key={item.id}>
+                  {item.name}
+                </option>
+              );
             })}
           </select>
         </div>
@@ -76,7 +80,11 @@ const Exchange = () => {
           />
           <select name='Target' onChange={handleTargetChange}>
             {filteredVS.map((item) => {
-              return <option value={item}>{item}</option>;
+              return (
+                <option value={item} key={item}>
+                  {item}
+                </option>
+              );
             })}
           </select>
         </div>
