@@ -5,6 +5,17 @@ module.exports = {
   testApi: async function (req, res) {
     res.json({ status: 'Ok' });
   },
+  getCoinMineableData: async function (req, res) {
+    try {
+      const response = await axios.get(`https://api.minerstat.com/v2/coins`);
+      res.json(
+        response.data.filter((item) => item.name.toLowerCase() == req.params.id)
+      );
+    } catch (err) {
+      res.send(err);
+    }
+  },
+
   getCoinMarketData: async function (req, res) {
     try {
       const response = await axios.get(
@@ -19,6 +30,37 @@ module.exports = {
     try {
       const response = await axios.get(
         `https://api.coingecko.com/api/v3/coins/${req.params.id}`
+      );
+      res.json(response.data);
+    } catch (err) {
+      res.send(err);
+    }
+  },
+
+  getMineableCoins: async function (req, res) {
+    try {
+      const response = await axios.get(
+        `https://whattomine.com/calculators.json`
+      );
+      res.json(response.data);
+    } catch (err) {
+      res.send(err);
+    }
+  },
+
+  getAllPools: async function (req, res) {
+    try {
+      const response = await axios.get(`https://api.minerstat.com/v2/pools?`);
+      res.json(response.data);
+    } catch (err) {
+      res.send(err);
+    }
+  },
+
+  getPool: async function (req, res) {
+    try {
+      const response = await axios.get(
+        `https://api.minerstat.com/v2/pools?${req.params.id}`
       );
       res.json(response.data);
     } catch (err) {

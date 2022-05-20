@@ -6,7 +6,6 @@ import { setTheme } from '../themes';
 import logo from '../images/logo.png';
 
 const Header = () => {
-  const { info, setInfo } = useContext(InfoContext);
   const [togClass, setTogClass] = useState('dark');
   let theme = localStorage.getItem('theme');
 

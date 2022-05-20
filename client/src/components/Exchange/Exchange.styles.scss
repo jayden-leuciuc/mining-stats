@@ -1,0 +1,30 @@
+.exchange-container {
+  text-align: center;
+  padding-top: 50px;
+  .exchange-flex {
+    display: flex;
+    justify-content: space-around;
+    .cl-container {
+      align-items: center;
+      input {
+        width: 100%;
+      }
+      select {
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+      }
+    }
+    .vs-container {
+      align-items: center;
+      input {
+        min-width: 250px;
+      }
+      select {
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+      }
+    }
+  }
+}

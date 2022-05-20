@@ -3,18 +3,17 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 import './HardwareSpecs.styles.scss';
-const apiURL = 'https://api.minerstat.com/v2/hardware';
 function HardwareSpecs({ specData }) {
   const [hardwareData, setHardwareData] = useState([]);
-  const [isLoading, setisLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
     axios
-      .get(apiURL)
+      .get('/api/hardware')
       .then((response) => {
         setHardwareData(response.data.filter((name) => name.url === id)[0]);
-        setisLoading(false);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);

@@ -98,7 +98,7 @@ const StockHighChart = () => {
   }, []);
 
   return (
-    <div class='reacthighcharts2'>
+    <div className='reacthighcharts2'>
       <ReactHighcharts config={configPrice} />
     </div>
   );

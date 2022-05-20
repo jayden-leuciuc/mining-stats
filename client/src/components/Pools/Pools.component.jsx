@@ -16,9 +16,9 @@ const Pools = () => {
     setNumShownPools(15);
     setUrlParams(urlParam);
   }
-  useEffect(() => {
+  function filterPool(urlParam) {
     axios
-      .get(`https://api.minerstat.com/v2/pools?${urlParams}`)
+      .get(`/api/pools/${urlParam}`)
       .then((response) => {
         setNumPools(response.data.length);
         setPoolData(response.data.slice(0, numShownPools));
@@ -26,18 +26,27 @@ const Pools = () => {
       .catch((error) => {
         console.error(error);
       });
-  }, [numShownPools, urlParams]);
+  }
+  useEffect(() => {
+    axios
+      .get(`/api/pools/`)
+      .then((response) => {
+        setNumPools(response.data.length);
+        setPoolData(response.data.slice(0, numShownPools));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <div className='pools-container'>
       <div className='button-container'>
         Sort by:
-        <button onClick={() => filterButton(``)}>All</button>
-        <button onClick={() => filterButton(`type=multipool`)}>
-          multipool
-        </button>
-        <button onClick={() => filterButton(`coin=ETH`)}>ETH Pools</button>
-        <button onClick={() => filterButton(`coin=ETC`)}>ETC Pools</button>
+        <button onClick={() => filterPool(``)}>All</button>
+        <button onClick={() => filterPool(`type=multipool`)}>Multipool</button>
+        <button onClick={() => filterPool(`coin=ETH`)}>ETH Pools</button>
+        <button onClick={() => filterPool(`coin=ETC`)}>ETC Pools</button>
       </div>
       <table className='pools-table'>
         <thead>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage.component';
 import Calculator from './pages/Calculator/CalculatorPage.component';
-import Exchange from './pages/Exchange/ExchangePage.component';
+import ExchangePage from './pages/Exchange/ExchangePage.component';
 import HardwareCalculator from './pages/HardwareCalculator/HardwareCalculatorPage.component';
 import * as Component from './components/componentExport';
 import AssetPage from './pages/Asset/AssetPage.component';
@@ -34,7 +34,9 @@ function App() {
           />
           <Route
             path='/exchange'
-            element={<StaticPageTemplate componentToPassDown={<Exchange />} />}
+            element={
+              <StaticPageTemplate componentToPassDown={<ExchangePage />} />
+            }
           />
           <Route
             path='/faq'

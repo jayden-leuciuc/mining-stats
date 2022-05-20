@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import shortNumber from 'short-number';
 import './MarketDataTable.styles.scss';
-import { InfoContext } from '../../context/CallsContext';
 
 const baseURL = 'https://api.coingecko.com/api/v3/ping';
 const otherURL =
@@ -10,7 +9,6 @@ const otherURL =
 
 function MarketDataTable() {
   const [apiData, setApiData] = useState([]);
-  const { info, setInfo } = useContext(InfoContext);
   useEffect(() => {
     axios
       .get(otherURL)
@@ -20,7 +18,6 @@ function MarketDataTable() {
       .catch((err) => {
         console.log(err);
       });
-    setInfo({ calls: info.calls + 1 });
   }, []);
 
   return (
